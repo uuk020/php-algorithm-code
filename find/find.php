@@ -9,7 +9,7 @@
  */
 function find($integers)
 {
-    $odd = [];  //偶数数组
+    $odd  = [];  //偶数数组
     $even = []; // 奇数数组
     foreach ($integers as $value) {
         // 判断元素是否奇偶数
@@ -20,7 +20,7 @@ function find($integers)
             array_push($even, $value);
         }
     }
-    // 判断偶数数组个数, 等于1, 说明该$integers数组有偶数
+    // 判断偶数数组个数, 等于1, 说明该 $integers数组有偶数
     if (count($odd) == 1) {
         return $odd[0];
     }

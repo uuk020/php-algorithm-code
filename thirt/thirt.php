@@ -13,9 +13,9 @@
  */
 function thirt($n) {
     $sequence = [1,10,9,12,3,4];
-    $sum = 0;
+    $sum      = 0;
     // 将字符串转换为数组, 再把数组相反
-    $arr = array_reverse(str_split($n));
+    $arr      = array_reverse(str_split($n));
     // 循环数组
     for ($i = 0; $i < count($arr); $i++) {
       // 通过余数来循环出$sequence数组的值 因为$sequence有6个所以除于6求余数.

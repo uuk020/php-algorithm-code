@@ -13,9 +13,9 @@ function format_duration($seconds)
   if ($seconds == 0) return 'now';
   // 时间计算数组
   $date = [
-      'year' => 60 * 60 * 24 * 365,
-      'day' => 60 * 60 * 24,
-      'hour' => 60 * 60,
+      'year'   => 60 * 60 * 24 * 365,
+      'day'    => 60 * 60 * 24,
+      'hour'   => 60 * 60,
       'minute' => 60,
       'second' => 1
   ];

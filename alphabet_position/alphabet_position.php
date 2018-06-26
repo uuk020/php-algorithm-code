@@ -13,7 +13,7 @@ function alphabet_position(string $s): string
     $letterArr = [1 => 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
     // 将参数$s全部小写, 转换为目标数组
     $targetArr = str_split(strtolower($s));
-    $result = '';
+    $result    = '';
     // 循环目标数组
     foreach ($targetArr as $value) {
         // 循环字母表数组
