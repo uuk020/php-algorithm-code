@@ -17,4 +17,4 @@
 - [series_sum:规律计算题](https://github.com/uuk020/PHPCode/blob/master/series_sum/answer.php)
 - [thirt:13的可分性规则](https://github.com/uuk020/PHPCode/blob/master/thirt/answer.php) 
 - [listSquared:找出一个数是它所有整除的数的平方之和的结果,此结果能够开平方.](https://github.com/uuk020/PHPCode/blob/master/listSquared/answer.php)
-
+- [Find the unique number: 找数组不同的值.](https://github.com/uuk020/PHPCode/blob/master/find_uniq/answer.php)
