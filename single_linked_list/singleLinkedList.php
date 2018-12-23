@@ -9,7 +9,7 @@ class SingleLinedList
     /**
      * 哨兵节点 - 头结点
      *
-     * @var [type]
+     * @var Node
      */
     private $head = null;
 
@@ -45,12 +45,12 @@ class SingleLinedList
     }
 
     /**
-     *  插入数据 采用头插法 插入新数据
+     *  采用头插法 生成倒序链表
      *
      * @param  mixed $data
      * @return Node
      */
-    public function insert($data)
+    public function headInsert($data)
     {
         return $this->insertDataAfter($this->head, $data);
     }
@@ -78,5 +78,98 @@ class SingleLinedList
         $originNode->setNext($newNode);
         $this->length++;
         return $newNode;
+    }
+
+    /**
+     * 在某个节点前插入新的节点
+     *
+     * @param Node  $originNode
+     * @param mixed $data
+     * @return void
+     */
+    public function insertDataBefore(Node $originNode, $data)
+    {
+        if (empty($originNode)) {
+            return false;
+        }
+        $preNode = $this->getPreNode($originNode);
+        return $this->insertDataAfter($preNode, $data);
+    }
+
+    /**
+     * 获取某个节点的前置节点
+     *
+     * @param Node $node
+     * @return void
+     */
+    public function getPreNode(Node $node)
+    {
+        if (empty($node)) {
+            return false;
+        }
+        $curNode = $this->head;
+        $preNode = $this->head;
+
+        while ($curNode !== $node && $curNode != null) {
+            $preNode = $curNode;
+            $curNode = $curNode->next;
+        }
+        return $preNode;
+    }
+
+    /**
+     * 在某个节点后插入新的节点
+     *
+     * @param Node $originNode
+     * @param Node $newNode
+     * @return void
+     */
+    public function insertNodeAfter(Node $originNode, Node $newNode)
+    {
+        if (empty($originNode)) {
+            return false;
+        }
+        $newNode->setNext($originNode->getNext());
+        $originNode->setNext($newNode);
+        $this->length++;
+        return true;
+    }
+
+    /**
+     * 打印链表
+     *
+     * @return void
+     */
+    public function printList()
+    {
+        if (null === $this->head->getNext()) {
+            return false;
+        }
+        $curNode = $this->head;
+        $len = $this->length;
+        while ($curNode->getNext() !== null && $len--) {
+            echo $curNode->getNext()->getData() . '-> ';
+            $curNode = $curNode->getNext();
+        }
+        echo 'NULL' . PHP_EOL;
+        return true;
+    }
+
+    /**
+     * 删除结点
+     *
+     * @param Node $node
+     * @return void
+     */
+    public function delete(Node $node)
+    {
+        if (empty($node)) {
+            return false;
+        }
+        $preNode = $this->getPreNode($node);
+        $preNode->setNext($node->getNext());
+        unset($node);
+        $this->length--;
+        return true;
     }
 }
