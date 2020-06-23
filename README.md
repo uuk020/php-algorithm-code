@@ -1,6 +1,6 @@
 <h1 align="center">PHP编程题目</h1>
 
-<p align="center">:rainbow: 每周两道编程题目, 加强自己对PHP理解和编程能力. 欢迎提出好的思路, 相互交流.</p>
+<p align="center">:rainbow: 加强自己对PHP理解和编程能力. 欢迎提出好的思路, 相互交流.</p>
 
 [![Build Status](https://s1.ax1x.com/2018/09/03/PzkefJ.png)](https://www.codewars.com)
 
